@@ -24,6 +24,7 @@ public class Sketch extends PApplet {
   public void setup() {
     imgBackground = loadImage("space.jpg");
 
+    // Resizing the images
     imgAsteroid = loadImage("asteroid.png");
     imgAsteroid.resize(imgAsteroid.width/4, imgAsteroid.height/4);
 
@@ -32,7 +33,7 @@ public class Sketch extends PApplet {
   }
 
   public void draw() {
-    background(128);
+    background(0);
 
     // Setting the position of the image so it shows more galaxy
     image(imgBackground, -1000, 0);
@@ -66,6 +67,7 @@ public class Sketch extends PApplet {
     } else if (fltUFOX + imgUFO.width >= width) {
       fltUFOX = width - imgUFO.width; // Set UFO's X position to the window width - UFO's width
       velUFOX *= -1; // Reverse the horizontal direction
+      
     }
   }
 }
